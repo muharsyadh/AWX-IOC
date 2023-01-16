@@ -1,0 +1,9 @@
+---
+- hosts: rb1
+  connection: network_cli
+  gather_facts: no 
+
+  tasks:
+  - name: Contoh Menambahkan IP Address Ether2
+    routeros_command:
+      commands: /ip address add address=192.168.100.1/24 interface=ether2
